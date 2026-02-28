@@ -1,0 +1,92 @@
+<!-- success.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request Received | Aromax Technologies</title>
+
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="Thank you. Your quotation request has been received." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/quote.css" />
+
+  <meta name="theme-color" content="#000000" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Minimal icons needed on this page -->
+  <svg class="visually-hidden" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20 11.8c0 4.5-3.7 8.2-8.2 8.2-1.4 0-2.8-.4-4-1.1L4 20l1.1-3.6A8.1 8.1 0 0 1 3.8 12C3.8 7.5 7.5 3.8 12 3.8c4.5 0 8.2 3.7 8.2 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.2 8.9c.2-.3.4-.3.6-.3h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.5 0 .7l-.3.5c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.5-.3c.2-.1.5-.1.7 0l1.6.7c.3.1.4.3.4.5v.5c0 .2 0 .4-.3.6-.4.5-1 .9-1.7.9-1 0-2.4-.4-4.1-2.1-1.7-1.7-2.1-3.1-2.1-4.1 0-.7.4-1.3.9-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="https://www.aromaxtechnologies.com/" aria-label="Aromax Technologies Home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">AROMAX</span>
+            <span class="brand-sub">Technologies</span>
+          </span>
+        </a>
+      </div>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="quotation.html">New Request</a>
+        <a class="btn btn-primary" href="https://www.aromaxtechnologies.com/">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container page-center" aria-label="Success message">
+      <div class="card center-card">
+        <p class="kicker">REQUEST RECEIVED</p>
+        <h1 class="page-title">Thank you. Your quotation request is in our pipeline.</h1>
+        <p class="page-text">
+          We’ll review the details and respond with a scoped quotation and next steps. If you need to fast-track coordination, use WhatsApp.
+        </p>
+
+        <div class="center-actions">
+          <a class="btn btn-primary" href="https://wa.me/256701951404?text=Hello%20Aromax%2C%20I%20submitted%20a%20quotation%20request%20and%20would%20like%20to%20follow%20up.">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+            WhatsApp Follow-up
+          </a>
+          <a class="btn btn-ghost" href="mailto:info@aromaxtechnologies.com">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-mail"></use></svg>
+            Email
+          </a>
+        </div>
+
+        <p class="fineprint">If you reached this page while testing locally, the form submission was simulated to avoid static-host errors.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p class="muted">© <span data-year></span> Aromax Technologies.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+  </script>
+</body>
+</html>
