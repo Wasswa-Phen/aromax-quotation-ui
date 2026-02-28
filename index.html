@@ -1,0 +1,952 @@
+<!-- quotation.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get a Quotation | Aromax Technologies</title>
+
+  <meta name="description" content="Request a quotation from Aromax Technologies. Select services, share requirements, and send a structured request in minutes." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.aromaxtechnologies.com/quotation.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/quote.css" />
+
+  <meta name="theme-color" content="#000000" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Inline SVG Icon Set (clean, minimal, consistent stroke) -->
+  <svg class="visually-hidden" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-chevron-down" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24">
+      <path d="M19 12H7M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M7 4h3l2 5-2 1c1.2 2.4 3.1 4.3 5.5 5.5l1-2 5 2v3c0 1.1-.9 2-2 2C9.4 21 3 14.6 3 6c0-1.1.9-2 2-2h2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20 11.8c0 4.5-3.7 8.2-8.2 8.2-1.4 0-2.8-.4-4-1.1L4 20l1.1-3.6A8.1 8.1 0 0 1 3.8 12C3.8 7.5 7.5 3.8 12 3.8c4.5 0 8.2 3.7 8.2 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.2 8.9c.2-.3.4-.3.6-.3h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.5 0 .7l-.3.5c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.5-.3c.2-.1.5-.1.7 0l1.6.7c.3.1.4.3.4.5v.5c0 .2 0 .4-.3.6-.4.5-1 .9-1.7.9-1 0-2.4-.4-4.1-2.1-1.7-1.7-2.1-3.1-2.1-4.1 0-.7.4-1.3.9-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 12h18" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 3c2.6 2.4 4.2 5.6 4.2 9S14.6 18.6 12 21c-2.6-2.4-4.2-5.6-4.2-9S9.4 5.4 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-service-web" viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 9h16" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M7 7h.01M9 7h.01M11 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-service-shield" viewBox="0 0 24 24">
+      <path d="M12 3l8 4v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7l8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9 12l2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-service-brand" viewBox="0 0 24 24">
+      <path d="M7 7h10v10H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9 12h6M12 9v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-service-live" viewBox="0 0 24 24">
+      <path d="M6 8h12v10H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M10 12l3 2v-4l-3 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 10c-1 1-1 3 0 4M20 10c1 1 1 3 0 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-service-video" viewBox="0 0 24 24">
+      <path d="M4 7h12v10H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M16 10l4-2v8l-4-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-service-training" viewBox="0 0 24 24">
+      <path d="M4 7l8-3 8 3-8 3-8-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 7v7c0 1 3 3 8 3s8-2 8-3V7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 13h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path d="M14 8h2V5h-2c-2 0-4 2-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13V9c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <path d="M7 7h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M7 17L17 7M7 7l10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24">
+      <path d="M21 12c0-2.5-.3-4-1-4.5-1-.8-7-.8-8-.8s-7 0-8 .8C3.3 8 3 9.5 3 12s.3 4 1 4.5c1 .8 7 .8 8 .8s7 0 8-.8c.7-.5 1-2 1-4.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M11 10l4 2-4 2v-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="https://www.aromaxtechnologies.com/" aria-label="Aromax Technologies Home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">AROMAX</span>
+            <span class="brand-sub">Technologies</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="https://www.aromaxtechnologies.com/">Home</a>
+
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-link-button" type="button" aria-haspopup="true" aria-expanded="false" data-dropdown-button>
+            Services
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Services menu" data-dropdown-panel>
+            <a role="menuitem" class="dropdown-item" href="https://www.aromaxtechnologies.com/#services">Web & IT Solutions</a>
+            <a role="menuitem" class="dropdown-item" href="https://www.aromaxtechnologies.com/#training">Training & Coaching</a>
+            <a role="menuitem" class="dropdown-item" href="https://production.aromaxtechnologies.com/">Aromax Productions</a>
+            <a role="menuitem" class="dropdown-item" href="https://www.aromaxtechnologies.com/#contact">Contact</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="https://production.aromaxtechnologies.com/">Production</a>
+        <a class="nav-link" href="https://www.aromaxtechnologies.com/pricing.html">Pricing</a>
+        <a class="nav-link" href="https://www.aromaxtechnologies.com/blog.html">Blog</a>
+        <a class="nav-link" href="https://www.aromaxtechnologies.com/contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-link" href="mailto:info@aromaxtechnologies.com" aria-label="Email Aromax">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-mail"></use></svg>
+        </a>
+        <a class="icon-link" href="https://wa.me/256701951404?text=Hello%20Aromax%2C%20I%27d%20like%20to%20request%20a%20quotation." aria-label="Chat on WhatsApp">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        </a>
+        <a class="icon-link" href="https://www.aromaxtechnologies.com/contact.html" aria-label="Contact us">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-phone"></use></svg>
+        </a>
+
+        <a class="btn btn-primary header-cta" href="quotation.html" aria-label="Get a Quote (current page)">Get Quote</a>
+
+        <button class="btn btn-icon nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false" data-drawer-open>
+          <svg class="icon" width="22" height="22" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="backdrop" data-backdrop hidden></div>
+
+    <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true" data-drawer hidden>
+      <div class="drawer-head">
+        <div class="drawer-title">
+          <span class="drawer-kicker">Navigation</span>
+          <span class="drawer-brand">Aromax</span>
+        </div>
+        <button class="btn btn-icon" type="button" aria-label="Close menu" data-drawer-close>
+          <svg class="icon" width="22" height="22" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="drawer-group" role="group" aria-label="Main">
+          <div class="drawer-group-title">Main</div>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/">Home</a>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/pricing.html">Pricing</a>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/blog.html">Blog</a>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/contact.html">Contact</a>
+        </div>
+
+        <div class="drawer-group" role="group" aria-label="Branches">
+          <div class="drawer-group-title">Branches</div>
+          <a class="drawer-link" href="https://production.aromaxtechnologies.com/">Aromax Productions</a>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/#training">Training & Coaching</a>
+          <a class="drawer-link" href="https://www.aromaxtechnologies.com/#services">Web & IT Solutions</a>
+        </div>
+
+        <div class="drawer-group" role="group" aria-label="Quick action">
+          <div class="drawer-group-title">Quick action</div>
+          <a class="drawer-link drawer-link-strong" href="quotation.html">Get Quote</a>
+          <a class="drawer-link" href="mailto:info@aromaxtechnologies.com">
+            <span class="drawer-link-ico" aria-hidden="true">
+              <svg class="icon" width="18" height="18"><use href="#i-mail"></use></svg>
+            </span>
+            Email us
+          </a>
+          <a class="drawer-link" href="https://wa.me/256701951404?text=Hello%20Aromax%2C%20I%27d%20like%20to%20request%20a%20quotation.">
+            <span class="drawer-link-ico" aria-hidden="true">
+              <svg class="icon" width="18" height="18"><use href="#i-whatsapp"></use></svg>
+            </span>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero hero-quote" aria-label="Quotation request hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">AT AROMAX</p>
+          <h1 class="hero-title">We bring cutting-edge digital solutions to life — with clarity, speed, and accountable execution.</h1>
+          <p class="hero-text">
+            Request a quotation in four guided steps. Select services, share requirements, and receive a structured response that fits your timeline and budget reality.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Start Quotation</a>
+            <a class="btn btn-ghost" href="https://www.aromaxtechnologies.com/">Back to Home</a>
+          </div>
+        </div>
+
+        <!-- Minimal background graphics (SVG) -->
+        <div class="hero-art" aria-hidden="true">
+          <svg class="hero-svg" viewBox="0 0 520 380" role="img" aria-label="">
+            <defs>
+              <pattern id="p-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.6" fill="currentColor" opacity=".12"></circle>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="520" height="380" fill="url(#p-dots)"></rect>
+            <path d="M60 290 C160 190, 220 340, 320 240 S 450 160, 500 250" fill="none" stroke="currentColor" stroke-width="2" opacity=".35" />
+            <rect x="72" y="70" width="220" height="140" rx="18" fill="none" stroke="currentColor" stroke-width="2" opacity=".32"/>
+            <rect x="258" y="122" width="190" height="120" rx="18" fill="none" stroke="currentColor" stroke-width="2" opacity=".22"/>
+            <circle cx="410" cy="90" r="30" fill="none" stroke="currentColor" stroke-width="2" opacity=".30"></circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark positioning section -->
+    <section class="dark-band" aria-label="Aromax positioning">
+      <div class="container dark-band-inner">
+        <h2 class="dark-title">One partner. Two execution engines.</h2>
+        <p class="dark-text">
+          Aromax Technologies builds digital systems. Aromax Productions delivers live streaming, printing, videography, photography, branding, adverts, and surprise services for corporate and personal needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quote Flow -->
+    <section id="quote" class="quote-section" aria-label="Quotation multi-step form">
+      <div class="container quote-layout">
+        <div class="quote-main">
+          <div class="quote-head">
+            <h2 class="section-title">Get Quotation</h2>
+            <p class="section-sub">A guided flow designed to reduce back-and-forth. Provide what matters, skip what doesn’t.</p>
+          </div>
+
+          <!-- Stepper -->
+          <ol class="stepper" aria-label="Quotation steps" data-stepper>
+            <li class="stepper-item is-active" data-step="1">
+              <span class="stepper-badge" aria-hidden="true">1</span>
+              <span class="stepper-label">Services</span>
+            </li>
+            <li class="stepper-item" data-step="2">
+              <span class="stepper-badge" aria-hidden="true">2</span>
+              <span class="stepper-label">Details</span>
+            </li>
+            <li class="stepper-item" data-step="3">
+              <span class="stepper-badge" aria-hidden="true">3</span>
+              <span class="stepper-label">Contact</span>
+            </li>
+            <li class="stepper-item" data-step="4">
+              <span class="stepper-badge" aria-hidden="true">4</span>
+              <span class="stepper-label">Review</span>
+            </li>
+          </ol>
+
+          <!-- Netlify-friendly form -->
+          <form class="quote-form" name="quotation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html" data-quote-form>
+            <input type="hidden" name="form-name" value="quotation" />
+            <p class="visually-hidden">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Step 1 -->
+            <section class="step is-active" data-step-panel="1" aria-labelledby="s1-title">
+              <div class="step-title-row">
+                <h3 id="s1-title" class="step-title">Select services</h3>
+                <p class="step-help">Choose one or multiple services. You’ll get relevant questions next.</p>
+              </div>
+
+              <div class="service-grid" role="group" aria-label="Services selection">
+                <!-- Multi-select cards -->
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Website Design & Development" data-service="web" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-web"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Website Design & Development</span>
+                    <span class="service-desc">Modern, fast, credible websites that convert.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Maintenance & Security" data-service="security" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-shield"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Maintenance & Security</span>
+                    <span class="service-desc">Updates, protection, uptime, and reliability.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Branding & Design" data-service="branding" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-brand"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Branding & Design</span>
+                    <span class="service-desc">Identity systems, marketing designs, print-ready assets.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Live Streaming" data-service="live" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-live"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Live Streaming</span>
+                    <span class="service-desc">Stable multi-platform streaming for events.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Videography & Photography" data-service="video" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-video"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Videography & Photography</span>
+                    <span class="service-desc">Content capture with professional delivery.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Training & Coaching" data-service="training" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-training"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Training & Coaching</span>
+                    <span class="service-desc">Practical training with measurable outcomes.</span>
+                  </span>
+                </label>
+
+                <!-- Optional extras -->
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Printing" data-service="printing" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-service-brand"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Printing</span>
+                    <span class="service-desc">Banners, posters, cards, and event materials.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="Social Media Management" data-service="social" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-globe"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">Social Media Management</span>
+                    <span class="service-desc">Consistency, clarity, and growth-focused content.</span>
+                  </span>
+                </label>
+
+                <label class="service-card">
+                  <input class="service-check" type="checkbox" name="services" value="IT Support" data-service="itsupport" />
+                  <span class="service-ico" aria-hidden="true">
+                    <svg class="icon" width="22" height="22"><use href="#i-phone"></use></svg>
+                  </span>
+                  <span class="service-meta">
+                    <span class="service-name">IT Support</span>
+                    <span class="service-desc">Basic troubleshooting and systems support.</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="step-actions">
+                <div class="error-slot" role="alert" aria-live="polite" data-step-error></div>
+                <button class="btn btn-primary" type="button" data-next>
+                  Continue
+                  <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- Step 2 -->
+            <section class="step" data-step-panel="2" aria-labelledby="s2-title" hidden>
+              <div class="step-title-row">
+                <h3 id="s2-title" class="step-title">Project details</h3>
+                <p class="step-help">Tell us priorities, timeline, and what success looks like. We’ll tailor follow-up questions to your selection.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="priority">Priority</label>
+                  <select id="priority" name="priority" required>
+                    <option value="">Select priority</option>
+                    <option value="Urgent (1–7 days)">Urgent (1–7 days)</option>
+                    <option value="Standard (1–3 weeks)">Standard (1–3 weeks)</option>
+                    <option value="Planned (1+ months)">Planned (1+ months)</option>
+                  </select>
+                  <p class="hint">This helps us allocate the right execution lane.</p>
+                </div>
+
+                <div class="field">
+                  <label for="budget">Budget range (optional)</label>
+                  <select id="budget" name="budget">
+                    <option value="">Prefer not to say</option>
+                    <option value="Under UGX 500k">Under UGX 500k</option>
+                    <option value="UGX 500k – 2M">UGX 500k – 2M</option>
+                    <option value="UGX 2M – 5M">UGX 2M – 5M</option>
+                    <option value="UGX 5M+">UGX 5M+</option>
+                  </select>
+                  <p class="hint">We’ll propose options aligned to scope reality.</p>
+                </div>
+
+                <div class="field">
+                  <label for="timeline">Preferred start date (optional)</label>
+                  <input id="timeline" name="start_date" type="date" />
+                </div>
+
+                <div class="field field-full">
+                  <label for="message">Project brief</label>
+                  <textarea id="message" name="message" rows="5" minlength="12" placeholder="Write a clear brief (at least 12 characters). What do you need built, improved, or delivered?"></textarea>
+                  <p class="hint">Keep it concrete: audience, deliverables, and must-have features.</p>
+                </div>
+              </div>
+
+              <!-- Dynamic service fields -->
+              <div class="dynamic-wrap" aria-label="Service-specific questions">
+                <h4 class="mini-title">Service-specific details</h4>
+                <p class="mini-sub">Only relevant fields appear based on your service selection.</p>
+
+                <div class="dynamic-grid" data-dynamic-fields>
+                  <!-- Website -->
+                  <div class="dyn-card" data-show-when="web" hidden>
+                    <h5 class="dyn-title">Website scope</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="site_type">Website type</label>
+                        <select id="site_type" name="site_type">
+                          <option value="">Select</option>
+                          <option value="Business / Company">Business / Company</option>
+                          <option value="Church / Ministry">Church / Ministry</option>
+                          <option value="School / Institution">School / Institution</option>
+                          <option value="E-commerce">E-commerce</option>
+                          <option value="Portfolio">Portfolio</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="pages">Estimated pages</label>
+                        <select id="pages" name="estimated_pages">
+                          <option value="">Select</option>
+                          <option value="1–5">1–5</option>
+                          <option value="6–10">6–10</option>
+                          <option value="11–20">11–20</option>
+                          <option value="20+">20+</option>
+                        </select>
+                      </div>
+                      <div class="field field-full">
+                        <label for="domain">Domain / website link (optional)</label>
+                        <input id="domain" name="domain_or_link" type="url" placeholder="https://example.com" inputmode="url" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Maintenance -->
+                  <div class="dyn-card" data-show-when="security" hidden>
+                    <h5 class="dyn-title">Maintenance & security focus</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="maint_type">Support type</label>
+                        <select id="maint_type" name="maintenance_type">
+                          <option value="">Select</option>
+                          <option value="Monthly maintenance plan">Monthly maintenance plan</option>
+                          <option value="One-time fix & hardening">One-time fix & hardening</option>
+                          <option value="Audit only">Audit only</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="platform">Platform</label>
+                        <select id="platform" name="platform">
+                          <option value="">Select</option>
+                          <option value="WordPress">WordPress</option>
+                          <option value="Custom HTML/CSS/JS">Custom HTML/CSS/JS</option>
+                          <option value="Other / Not sure">Other / Not sure</option>
+                        </select>
+                      </div>
+                      <div class="field field-full">
+                        <label for="issues">Known issues (optional)</label>
+                        <input id="issues" name="known_issues" type="text" placeholder="e.g., hacked, slow, forms failing, outdated plugins" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Branding -->
+                  <div class="dyn-card" data-show-when="branding" hidden>
+                    <h5 class="dyn-title">Branding deliverables</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="brand_assets">What do you need?</label>
+                        <select id="brand_assets" name="branding_assets">
+                          <option value="">Select</option>
+                          <option value="Logo + brand kit">Logo + brand kit</option>
+                          <option value="Social media designs">Social media designs</option>
+                          <option value="Print designs">Print designs</option>
+                          <option value="Full brand system">Full brand system</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="brand_style">Style direction</label>
+                        <select id="brand_style" name="branding_style">
+                          <option value="">Select</option>
+                          <option value="Clean & premium">Clean & premium</option>
+                          <option value="Bold & energetic">Bold & energetic</option>
+                          <option value="Minimal & modern">Minimal & modern</option>
+                          <option value="Not sure">Not sure</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Live -->
+                  <div class="dyn-card" data-show-when="live" hidden>
+                    <h5 class="dyn-title">Live streaming details</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="platforms">Platforms</label>
+                        <select id="platforms" name="live_platforms">
+                          <option value="">Select</option>
+                          <option value="YouTube">YouTube</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="YouTube + Facebook">YouTube + Facebook</option>
+                          <option value="Other / multiple">Other / multiple</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="event_type">Event type</label>
+                        <select id="event_type" name="live_event_type">
+                          <option value="">Select</option>
+                          <option value="Church service">Church service</option>
+                          <option value="Conference">Conference</option>
+                          <option value="Corporate event">Corporate event</option>
+                          <option value="Wedding / personal">Wedding / personal</option>
+                        </select>
+                      </div>
+                      <div class="field field-full">
+                        <label for="location">Location (optional)</label>
+                        <input id="location" name="live_location" type="text" placeholder="Venue / area" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Video/Photo -->
+                  <div class="dyn-card" data-show-when="video" hidden>
+                    <h5 class="dyn-title">Videography & photography</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="coverage">Coverage</label>
+                        <select id="coverage" name="video_coverage">
+                          <option value="">Select</option>
+                          <option value="Photography only">Photography only</option>
+                          <option value="Video only">Video only</option>
+                          <option value="Photo + video">Photo + video</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="deliverables">Deliverables</label>
+                        <select id="deliverables" name="video_deliverables">
+                          <option value="">Select</option>
+                          <option value="Raw files">Raw files</option>
+                          <option value="Edited highlights">Edited highlights</option>
+                          <option value="Full edit package">Full edit package</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Training -->
+                  <div class="dyn-card" data-show-when="training" hidden>
+                    <h5 class="dyn-title">Training & coaching</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="topic">Topic</label>
+                        <select id="topic" name="training_topic">
+                          <option value="">Select</option>
+                          <option value="Web development">Web development</option>
+                          <option value="Graphic design">Graphic design</option>
+                          <option value="Digital marketing">Digital marketing</option>
+                          <option value="Production / live media">Production / live media</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="mode">Mode</label>
+                        <select id="mode" name="training_mode">
+                          <option value="">Select</option>
+                          <option value="On-site">On-site</option>
+                          <option value="Online">Online</option>
+                          <option value="Hybrid">Hybrid</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Printing -->
+                  <div class="dyn-card" data-show-when="printing" hidden>
+                    <h5 class="dyn-title">Printing requirements</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="print_items">Items</label>
+                        <select id="print_items" name="print_items">
+                          <option value="">Select</option>
+                          <option value="Banners">Banners</option>
+                          <option value="Posters">Posters</option>
+                          <option value="Business cards">Business cards</option>
+                          <option value="Stickers / labels">Stickers / labels</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="quantity">Quantity (approx.)</label>
+                        <input id="quantity" name="print_quantity" type="number" min="1" inputmode="numeric" placeholder="e.g., 100" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Social -->
+                  <div class="dyn-card" data-show-when="social" hidden>
+                    <h5 class="dyn-title">Social media management</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="channels">Channels</label>
+                        <select id="channels" name="social_channels">
+                          <option value="">Select</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="Instagram">Instagram</option>
+                          <option value="Facebook + Instagram">Facebook + Instagram</option>
+                          <option value="Multiple channels">Multiple channels</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="freq">Posting frequency</label>
+                        <select id="freq" name="social_frequency">
+                          <option value="">Select</option>
+                          <option value="3x per week">3x per week</option>
+                          <option value="5x per week">5x per week</option>
+                          <option value="Daily">Daily</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- IT Support -->
+                  <div class="dyn-card" data-show-when="itsupport" hidden>
+                    <h5 class="dyn-title">IT support scope</h5>
+                    <div class="form-grid compact">
+                      <div class="field">
+                        <label for="it_scope">Support scope</label>
+                        <select id="it_scope" name="it_support_scope">
+                          <option value="">Select</option>
+                          <option value="Device setup & troubleshooting">Device setup & troubleshooting</option>
+                          <option value="Network / internet">Network / internet</option>
+                          <option value="Email & accounts">Email & accounts</option>
+                          <option value="Office software">Office software</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="it_urgency">Urgency</label>
+                        <select id="it_urgency" name="it_support_urgency">
+                          <option value="">Select</option>
+                          <option value="Today">Today</option>
+                          <option value="This week">This week</option>
+                          <option value="Flexible">Flexible</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="step-actions">
+                <div class="error-slot" role="alert" aria-live="polite" data-step-error></div>
+                <div class="step-actions-split">
+                  <button class="btn btn-ghost" type="button" data-prev>
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+                    Back
+                  </button>
+                  <button class="btn btn-primary" type="button" data-next>
+                    Continue
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Step 3 -->
+            <section class="step" data-step-panel="3" aria-labelledby="s3-title" hidden>
+              <div class="step-title-row">
+                <h3 id="s3-title" class="step-title">Contact details</h3>
+                <p class="step-help">So we can respond fast with the right next step.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="full_name">Full name</label>
+                  <input id="full_name" name="full_name" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+256..." required />
+                  <p class="hint">Include country code if possible.</p>
+                </div>
+
+                <div class="field">
+                  <label for="org">Organization (optional)</label>
+                  <input id="org" name="organization" type="text" autocomplete="organization" />
+                </div>
+
+                <div class="field field-full">
+                  <label class="check">
+                    <input type="checkbox" name="consent" value="Yes" required />
+                    <span>I consent to be contacted about this request (email/phone/WhatsApp).</span>
+                  </label>
+                  <p class="hint">We keep it operational: no spam, no noise.</p>
+                </div>
+              </div>
+
+              <div class="step-actions">
+                <div class="error-slot" role="alert" aria-live="polite" data-step-error></div>
+                <div class="step-actions-split">
+                  <button class="btn btn-ghost" type="button" data-prev>
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+                    Back
+                  </button>
+                  <button class="btn btn-primary" type="button" data-next>
+                    Continue
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Step 4 -->
+            <section class="step" data-step-panel="4" aria-labelledby="s4-title" hidden>
+              <div class="step-title-row">
+                <h3 id="s4-title" class="step-title">Review & send</h3>
+                <p class="step-help">Confirm accuracy. Then send through the form, or choose WhatsApp for faster coordination.</p>
+              </div>
+
+              <div class="review-card" aria-label="Review summary" data-review></div>
+
+              <div class="review-actions">
+                <a class="inline-link" href="#" data-wa-send>
+                  Send via WhatsApp instead
+                  <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+                </a>
+              </div>
+
+              <div class="step-actions">
+                <div class="error-slot" role="alert" aria-live="polite" data-step-error></div>
+                <div class="step-actions-split">
+                  <button class="btn btn-ghost" type="button" data-prev>
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+                    Back
+                  </button>
+                  <button class="btn btn-primary" type="submit">
+                    Submit Request
+                    <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                  </button>
+                </div>
+                <p class="fineprint">By submitting, you confirm the details are accurate and actionable.</p>
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <!-- Summary Sidebar -->
+        <aside class="quote-summary" aria-label="Live summary">
+          <div class="summary-card" data-summary-card>
+            <div class="summary-head">
+              <h3 class="summary-title">Request summary</h3>
+              <p class="summary-sub">Updates live as you type.</p>
+            </div>
+
+            <div class="summary-block">
+              <div class="summary-label">Services</div>
+              <ul class="summary-list" data-summary-services>
+                <li class="summary-muted">No services selected yet.</li>
+              </ul>
+            </div>
+
+            <div class="summary-block">
+              <div class="summary-label">Priority</div>
+              <div class="summary-value" data-summary-priority>—</div>
+            </div>
+
+            <div class="summary-block">
+              <div class="summary-label">Brief (snippet)</div>
+              <div class="summary-value summary-snippet" data-summary-brief>—</div>
+            </div>
+
+            <div class="summary-block">
+              <div class="summary-label">Contact</div>
+              <div class="summary-value" data-summary-contact>—</div>
+            </div>
+
+            <div class="summary-actions" aria-label="Quick actions">
+              <a class="summary-action" href="mailto:info@aromaxtechnologies.com" aria-label="Email info@aromaxtechnologies.com">
+                <span class="summary-action-ico" aria-hidden="true">
+                  <svg class="icon" width="18" height="18"><use href="#i-mail"></use></svg>
+                </span>
+                <span>Email</span>
+              </a>
+              <a class="summary-action" data-summary-wa href="https://wa.me/256701951404" aria-label="WhatsApp Aromax">
+                <span class="summary-action-ico" aria-hidden="true">
+                  <svg class="icon" width="18" height="18"><use href="#i-whatsapp"></use></svg>
+                </span>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="summary-foot">
+              <p class="summary-note">
+                Tip: keep the brief concrete. “What, for who, by when, and how success is measured.”
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container micro-faq" aria-label="What happens next">
+      <div class="micro-faq-grid">
+        <div class="micro-card">
+          <h3 class="micro-title">What happens after submission?</h3>
+          <p class="micro-text">We respond with a scoped plan, a realistic timeline, and an execution-ready quotation—no noise.</p>
+        </div>
+        <div class="micro-card">
+          <h3 class="micro-title">Can I request multiple services?</h3>
+          <p class="micro-text">Yes. The flow is designed for multi-service packages so nothing gets lost in chat threads.</p>
+        </div>
+        <div class="micro-card">
+          <h3 class="micro-title">Prefer WhatsApp?</h3>
+          <p class="micro-text">Use the WhatsApp option on review. It generates a structured message automatically.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <div class="footer-title">Aromax Technologies</div>
+            <div class="footer-sub">Execution-focused digital partner.</div>
+          </div>
+        </div>
+        <p class="footer-text">
+          We build credible digital presence, improve operational clarity, and deliver production services that scale from “present” to “powerful.”
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Quick links</div>
+        <ul class="footer-links">
+          <li><a href="https://www.aromaxtechnologies.com/">Home</a></li>
+          <li><a href="https://production.aromaxtechnologies.com/">Production</a></li>
+          <li><a href="https://www.aromaxtechnologies.com/pricing.html">Pricing</a></li>
+          <li><a href="https://www.aromaxtechnologies.com/blog.html">Blog</a></li>
+          <li><a href="https://www.aromaxtechnologies.com/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-head">Contact</div>
+        <ul class="footer-contact">
+          <li>
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-mail"></use></svg>
+            <a href="mailto:info@aromaxtechnologies.com">info@aromaxtechnologies.com</a>
+          </li>
+          <li>
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+            <a href="https://wa.me/256701951404">+256 701 951 404</a>
+          </li>
+          <li>
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-globe"></use></svg>
+            <a href="https://www.aromaxtechnologies.com/">aromaxtechnologies.com</a>
+          </li>
+        </ul>
+
+        <div class="footer-social" aria-label="Social links">
+          <a class="social" href="#" aria-label="Facebook (placeholder)">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-facebook"></use></svg>
+          </a>
+          <a class="social" href="#" aria-label="Instagram (placeholder)">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-instagram"></use></svg>
+          </a>
+          <a class="social" href="#" aria-label="X (placeholder)">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-x"></use></svg>
+          </a>
+          <a class="social" href="#" aria-label="YouTube (placeholder)">
+            <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-youtube"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="muted">© <span data-year></span> Aromax Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top" data-backtotop hidden>
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/quote.js" defer></script>
+</body>
+</html>
