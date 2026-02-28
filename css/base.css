@@ -9,8 +9,14 @@
 
   --black: #000000;
   --white: #ffffff;
+
+  /* Brand */
   --red: #d32027;
   --orange: #f07f1a;
+
+  /* Intent */
+  --primary: var(--red);
+  --accent: var(--orange);
 
   --radius: 16px;
   --radius-sm: 12px;
