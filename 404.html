@@ -1,0 +1,78 @@
+<!-- 404.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | Aromax Technologies</title>
+
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="The page you are looking for could not be found." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/quote.css" />
+
+  <meta name="theme-color" content="#000000" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="https://www.aromaxtechnologies.com/" aria-label="Aromax Technologies Home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">AROMAX</span>
+            <span class="brand-sub">Technologies</span>
+          </span>
+        </a>
+      </div>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="quotation.html">Get Quote</a>
+        <a class="btn btn-primary" href="https://www.aromaxtechnologies.com/">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container page-center" aria-label="Not found">
+      <div class="card center-card">
+        <p class="kicker">404</p>
+        <h1 class="page-title">This page doesn’t exist.</h1>
+        <p class="page-text">
+          The link may be broken, or the page may have moved. Use the actions below to get back on track.
+        </p>
+
+        <div class="center-actions">
+          <a class="btn btn-primary" href="quotation.html">Request a Quotation</a>
+          <a class="btn btn-ghost" href="https://www.aromaxtechnologies.com/">Go to Home</a>
+        </div>
+
+        <div class="mini-sitemap" aria-label="Popular links">
+          <a href="https://production.aromaxtechnologies.com/">Production</a>
+          <a href="https://www.aromaxtechnologies.com/pricing.html">Pricing</a>
+          <a href="https://www.aromaxtechnologies.com/contact.html">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p class="muted">© <span data-year></span> Aromax Technologies.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+  </script>
+</body>
+</html>
