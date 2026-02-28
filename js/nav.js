@@ -1,7 +1,7 @@
 // js/nav.js
-// Drawer + dropdown behavior with accessibility: ESC closes, backdrop click closes, focus management.
+// Drawer + dropdown behavior with accessibility: ESC closes, backdrop click closes, focus trap, scroll lock.
+// Fix: stop using [hidden] for drawer/backdrop so animation + click handling stays reliable.
 (function () {
-  const header = document.querySelector('[data-header]');
   const drawer = document.querySelector('[data-drawer]');
   const backdrop = document.querySelector('[data-backdrop]');
   const openBtn = document.querySelector('[data-drawer-open]');
@@ -13,59 +13,50 @@
 
   let lastFocused = null;
 
-  function isOpen() {
-    return drawer && drawer.dataset.open === 'true';
+  function setScrollLock(lock) {
+    document.documentElement.style.overflow = lock ? 'hidden' : '';
+  }
+
+  function isDrawerOpen() {
+    return !!drawer && drawer.dataset.open === 'true';
   }
 
   function openDrawer() {
     if (!drawer || !backdrop || !openBtn) return;
     lastFocused = document.activeElement;
 
-    drawer.hidden = false;
-    backdrop.hidden = false;
+    drawer.dataset.open = 'true';
+    backdrop.dataset.open = 'true';
+    drawer.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
 
-    requestAnimationFrame(() => {
-      drawer.dataset.open = 'true';
-      openBtn.setAttribute('aria-expanded', 'true');
-      drawer.setAttribute('aria-hidden', 'false');
-      backdrop.classList.add('is-on');
-      lockScroll(true);
-      focusFirstInDrawer();
-    });
+    setScrollLock(true);
+
+    // Focus first focusable
+    const focusable = drawer.querySelectorAll('a, button, input, select, textarea');
+    if (focusable.length) {
+      focusable[0].focus({ preventScroll: true });
+    }
   }
 
   function closeDrawer() {
     if (!drawer || !backdrop || !openBtn) return;
 
     drawer.dataset.open = 'false';
-    openBtn.setAttribute('aria-expanded', 'false');
+    backdrop.dataset.open = 'false';
     drawer.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
 
-    lockScroll(false);
-
-    // Allow transition to finish before hiding
-    window.setTimeout(() => {
-      drawer.hidden = true;
-      backdrop.hidden = true;
-    }, 160);
+    setScrollLock(false);
 
     if (lastFocused && typeof lastFocused.focus === 'function') {
-      lastFocused.focus();
+      lastFocused.focus({ preventScroll: true });
     }
   }
 
-  function lockScroll(lock) {
-    document.documentElement.style.overflow = lock ? 'hidden' : '';
-  }
-
-  function focusFirstInDrawer() {
-    const focusable = drawer.querySelectorAll('a, button');
-    if (focusable.length) focusable[0].focus();
-  }
-
   function trapFocus(e) {
-    if (!isOpen() || e.key !== 'Tab') return;
-    const focusable = drawer.querySelectorAll('a, button');
+    if (!isDrawerOpen() || e.key !== 'Tab') return;
+    const focusable = drawer.querySelectorAll('a, button, input, select, textarea');
     if (!focusable.length) return;
 
     const first = focusable[0];
@@ -80,9 +71,28 @@
     }
   }
 
+  function closeDropdown() {
+    if (!dropdownPanel || !dropdownBtn) return;
+    dropdownPanel.dataset.open = 'false';
+    dropdownBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openDropdown() {
+    if (!dropdownPanel || !dropdownBtn) return;
+    dropdownPanel.dataset.open = 'true';
+    dropdownBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleDropdown() {
+    if (!dropdownPanel) return;
+    const isOpen = dropdownPanel.dataset.open === 'true';
+    if (isOpen) closeDropdown();
+    else openDropdown();
+  }
+
   function onKeyDown(e) {
     if (e.key === 'Escape') {
-      if (isOpen()) closeDrawer();
+      if (isDrawerOpen()) closeDrawer();
       closeDropdown();
     }
     trapFocus(e);
@@ -91,42 +101,33 @@
   // Drawer events
   if (openBtn) openBtn.addEventListener('click', openDrawer);
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+  if (backdrop) {
+    backdrop.addEventListener('click', () => {
+      if (isDrawerOpen()) closeDrawer();
+    });
+    // prevent accidental scroll on backdrop (mobile)
+    backdrop.addEventListener('touchmove', (e) => {
+      if (isDrawerOpen()) e.preventDefault();
+    }, { passive: false });
+  }
+
   document.addEventListener('keydown', onKeyDown);
 
-  // Dropdown events (desktop)
-  function openDropdown() {
-    if (!dropdownPanel || !dropdownBtn) return;
-    dropdownPanel.dataset.open = 'true';
-    dropdownBtn.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeDropdown() {
-    if (!dropdownPanel || !dropdownBtn) return;
-    dropdownPanel.dataset.open = 'false';
-    dropdownBtn.setAttribute('aria-expanded', 'false');
-  }
-
-  function toggleDropdown() {
-    const isOpen = dropdownPanel && dropdownPanel.dataset.open === 'true';
-    if (isOpen) closeDropdown();
-    else openDropdown();
-  }
-
+  // Dropdown (desktop)
   if (dropdownBtn && dropdownPanel) {
     dropdownBtn.addEventListener('click', (e) => {
       e.preventDefault();
       toggleDropdown();
     });
 
-    // Click outside closes
+    // Click outside closes dropdown
     document.addEventListener('click', (e) => {
-      const target = e.target;
       if (!dropdownRoot) return;
-      if (!dropdownRoot.contains(target)) closeDropdown();
+      if (!dropdownRoot.contains(e.target)) closeDropdown();
     });
 
-    // Keyboard navigation within dropdown
+    // Keyboard support: open then focus first item
     dropdownBtn.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown') {
         openDropdown();
@@ -147,7 +148,15 @@
     });
   }
 
-  // Year stamp (shared convenience)
+  // Ensure initial state is closed (defensive)
+  if (drawer) {
+    drawer.dataset.open = 'false';
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  if (backdrop) backdrop.dataset.open = 'false';
+  if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+
+  // Year stamp
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
