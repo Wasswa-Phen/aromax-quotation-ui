@@ -17,9 +17,9 @@
 }
 
 .btn-primary{
-  background: var(--black);
+  background: var(--primary);
   color: var(--white);
-  border-color: var(--black);
+  border-color: var(--primary);
 }
 
 .btn-primary:hover{ text-decoration: none; opacity: .92; }
@@ -115,11 +115,21 @@
   background: var(--soft);
 }
 
+/* Drawer + backdrop: DO NOT rely on [hidden] for animation/reliability.
+   We keep them in DOM and toggle with aria + data-open + pointer-events. */
 .backdrop{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.55);
   z-index: 60;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease;
+}
+
+.backdrop[data-open="true"]{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .drawer{
@@ -134,9 +144,11 @@
   border: 1px solid var(--border);
   z-index: 70;
   box-shadow: var(--shadow);
-  transform: translateY(10px);
+
+  transform: translateY(14px);
   opacity: 0;
   pointer-events: none;
+  transition: transform .18s ease, opacity .18s ease;
 }
 
 .drawer[data-open="true"]{
@@ -207,11 +219,17 @@
   background: var(--soft);
 }
 
+/* Make the Get Quote link feel brand-led */
 .drawer-link-strong{
-  border-color: #cfcfcf;
+  border-color: rgba(211,32,39,.45);
   font-weight: 500;
 }
 
+.drawer-link-strong:hover{
+  border-color: rgba(211,32,39,.65);
+}
+
+/* Icon chip inside drawer uses orange accent */
 .drawer-link-ico{
   width: 22px;
   height: 22px;
@@ -289,3 +307,7 @@
 }
 
 .social:hover{ border-color: #d0d0d0; text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce){
+  .drawer, .backdrop{ transition: none; }
+}
